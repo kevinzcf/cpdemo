@@ -1,0 +1,5 @@
+server:
+  port: 8082
+myproperty:
+  p1: 3
+  p2: 4

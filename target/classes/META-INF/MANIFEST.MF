@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: mypj
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: kevinzcf
+Implementation-Vendor-Id: com.mypj
+Build-Jdk: 1.8.0_45
+Implementation-URL: http://projects.spring.io/spring-boot/mypj/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

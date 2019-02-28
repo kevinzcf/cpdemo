@@ -1,14 +1,21 @@
 spring:
   profiles:
     active: dev
-  datasource:
-    driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://192.168.0.12:3306/cpdemo
-    username: root
-    password: admin
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+
+  spring:
+    thymeleaf:
+      prefix:
+        classpath: /templates/
+      check-template-location: true
+      suffix: .html
+      encoding: UTF-8
+      content-type: text/html
+      mode: HTML5
+      cache: false
 
 

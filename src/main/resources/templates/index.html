@@ -1,1 +1,75 @@
-     <h1>hello Spring Boot!</h1>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!--https://blog.csdn.net/sinat_24048051/article/details/77531834-->
+    <script src="webjars/jquery/3.3.1/jquery.min.js"></script>
+    <script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <meta charset="UTF-8">
+    <title>Title</title>
+<body>
+<div class="jumbotron">
+    <div class="container">
+        <h1>CPDEMO</h1>
+    </div>
+</div>
+
+<div class="container">
+
+<div class="card">
+
+    <div class="card-body">
+
+        <table class="table table-hover">
+
+            <thead>
+            <tr>
+                <th>Item</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th class="text-center">Action</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="order: ${data.content}">
+                <td th:text="${order.itemName}"></td>
+                <td th:text="${order.itemDescriptions}"></td>
+                <td th:text="${order.status}"></td>
+                <td class="text-center">
+                    <a th:href="@{/apply/(id=${order.id})}" class="btn btn-primary">apply</a>
+                    <a class="btn btn-secondary">finish</a>
+                    <a class="btn btn-secondary">close</a>
+                </td>
+            </tr>
+            </tbody>
+
+
+
+        </table>
+        <hr/>
+
+        <ul class="nav nav-pills">
+            <li class="nav-item"
+                th:each="i: ${#numbers.sequence(0,data.totalPages - 1)}">
+                <a th:href="@{/(page=${i})}" th:text="${i}" class="nav-link" th:classappend="${currentPage}==${i}?'active':''"></a>
+            </li>
+        </ul>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+    <hr>
+
+    <footer>
+        <p>© 2019 XXX, Inc.</p>
+    </footer>
+</div> <!-- /container -->
+</body>
+</html>

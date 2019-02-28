@@ -10,5 +10,4 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 public interface CPOrderRepository extends JpaRepository<CPOrder, Integer> {
 
-	public List<CPOrder> findByName(String name);
 }

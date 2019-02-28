@@ -22,9 +22,9 @@ public class CPOrderControllerTest {
 	private MockMvc mvc;
 
 	@Test
-	public void girlList() throws Exception {
-		mvc.perform(MockMvcRequestBuilders.get("/orders")).andExpect(MockMvcResultMatchers.status().isOk())
-				.andExpect(MockMvcResultMatchers.content().string("abc"));
+	public void orderList() throws Exception {
+		mvc.perform(MockMvcRequestBuilders.get("/orderList")).andExpect(MockMvcResultMatchers.status().isOk())
+				.andExpect(MockMvcResultMatchers.content().string("Order"));
 	}
 
 }
